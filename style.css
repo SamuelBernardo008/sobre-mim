@@ -1,0 +1,56 @@
+/* css externo */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+  }
+  
+
+h1, h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header ul li img {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    padding: 5px;
+}
+
+
+header {
+    background-image: linear-gradient(to right, rgb(0, 73, 230), rgb(0, 172, 235));    
+    /* 1° valor = em cima e em baixo
+        2° valor = do lado e do outro */
+    padding: 1rem 7rem;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem
+}
+
+header a {
+    color: rgb(254, 254, 244);
+    font-weight: 700;
+    padding: .5rem 1rem;
+}
+
+header a:hover{
+    background-color: rgb(6, 63, 219);;
+}
+
+section {
+    min-height: 100px; /* opcional */
+    margin: 8vh 2vh;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+p {
+    margin-bottom: 1rem;
+}
