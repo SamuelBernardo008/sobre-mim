@@ -1,6 +1,31 @@
 /* css externo */
 
-<<<<<<< HEAD
+.material-icons {
+    font-size: 50px;
+    color: #ffffff;
+    vertical-align: middle;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+  
+    
+
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 550;
@@ -10,14 +35,14 @@ body {
 h1, h2{
     font-size: 32px;
     font-weight: bold;
+    
 }
 
-header ul li img {
-    transition: transform 0.3s ease;
-    display: inline-block;
-    padding: 5px;
-}
 
+h3{
+    font-size: 22px;
+    font-weight: bold;
+}
 
 header {
     background-image: linear-gradient(to right, rgb(0, 73, 230), rgb(0, 172, 235));    
@@ -42,20 +67,206 @@ header a {
 }
 
 header a:hover{
-    background-color: rgb(6, 63, 219);;
+    background-color: rgb(6, 63, 219);
+    border-radius: 8px;
 }
 
 section {
     min-height: 100px; /* opcional */
-    margin: 8vh 2vh;
+    margin: 4vh 2vh;
     padding: 1rem;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+}
+
+section#formacaoAcademica, section#hardSkills,
+section#softSkills {
+    border: none;
+}
+
+.titulo-secao {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.cards-em-linha {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 p {
     margin-bottom: 1rem;
-=======
-body{
-    background-color: black;
->>>>>>> e4a800e864b71f84cdbd87100184bc8d6075f9a0
 }
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+
+}
+
+input[type="text"],input[type="email"], textarea{
+    border: 1px solid #4e4e4e;
+    border-radius: 4px;
+    padding: .25rem ,75rem;
+    color:black;
+    resize: none;
+}
+
+input[type="submit"]{
+    background-color: rgb(0, 73, 230);
+    color: white;
+    padding: .25rem ,75rem;
+    border: 5px solid rgb(0, 73, 230);
+    font-weight: 700;
+    font-style: bold;
+    border-radius: 8px;
+}
+
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .card h3, .card h4 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    padding: 16px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.224);
+    transition: transform 0.2s ease;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+  .card h3{
+    text-align: left;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  #formacaoAcademica .card-titulomenor{
+    text-align: left;
+  }
+  
+  .cards-container h3 {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  
+  .cards-container p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+  }
+
+  /* Soft Skills - quadradinhos */
+#softSkills .cards-container {
+    display: list-item;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1000fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  #softSkills .card {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 7px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.29);
+    transition: transform 0.2s ease;
+  }
+  
+  #softSkills .card:hover {
+    transform: scale(1.02);
+  }
+  
+  #softSkills .card p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Projetos - retângulos */
+  .retangulos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .retangulo {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: background-color 0.2s;
+  }
+  
+  .retangulo:hover {
+    background-image:linear-gradient(to right, rgb(0, 73, 230), rgb(0, 172, 235))
+
+  }
+  
+  .retangulo h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .retangulo p {
+    margin: 0;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .retangulo a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .retangulo a:hover {
+    text-decoration: underline;
+  }
+  
+ 
+
+  
