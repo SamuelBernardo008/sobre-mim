@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark" data-theme="contrast">
 
 <head>
     <!-- Meta informações sobre uma página -->
@@ -23,11 +23,15 @@
             <li><a href="#meusProjetos">Projetos</a></li>
             <li><a href="#meusArtigos">Artigos</a></li>
             <li><a href="#fim">Última seção</a></li>
+            <li><span id="botao-tema">☀️</span></li>
+            <li><span id="botao-contrast">🏁</span></li>
         </ul>
     </header>
     <hr>
     <section id="sobreMim">
-        <h1>Sobre mim:</h1>
+      <img src="foto de perfil.png" alt="Foto de um garoto pardo, de cabelo caheado preto e óculos." width="200"
+            title="Foto de um garoto pardo, de cabelo caheado preto e óculos." target="_blank" class="fotoperfil">
+        <h1 class="titulo-inicio">Sobre mim:</h1>
         <p> - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio necessitatibus distinctio numquam saepe eum
             eos delectus at eius deserunt dignissimos cupiditate aliquam nemo, recusandae dolorum vitae unde tenetur
             labore esse.
@@ -36,9 +40,8 @@
             laborum illum tenetur impedit ipsum. Voluptas amet animi consequuntur neque illum nesciunt laboriosam eius
             atque?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam nostrum sunt sapiente, laboriosam
             ducimus maiores optio, ab veritatis quo facere voluptatem natus cupiditate, alias deserunt officiis cumque
-            illum ipsa unde.</p>
-        <img src="foto de perfil.png" alt="Foto de um garoto pardo, de cabelo caheado preto e óculos." width="200"
-            title="Foto de um garoto pardo, de cabelo caheado preto e óculos." target="_blank">
+            illum ipsa unde.
+          </p>
 
         <ul>
             <li>
@@ -158,7 +161,7 @@
         <div class="retangulos-container">
           <div class="retangulo">
             <h3>Jogo Online: Moonlander</h3>
-            <p><a href="https://samuelbernardo008.github.io/lopal-moonlander/" target="_blank">Acesse o jogo</a></p>
+            <a href="https://samuelbernardo008.github.io/lopal-moonlander/" target="_blank">Acesse o jogo</a>
           </div>
       
           <div class="retangulo">
@@ -192,8 +195,62 @@
     <hr>
 
     <section id="meusArtigos">
-        <h2>Meus Artigos</h2>
-    </section>
+      <h2 class="titulo-artigos">Meus artigos:</h2>
+      
+      <div class="artigos cards-em-linha">
+
+          <article class="card">
+              <header>
+                  <h3 class="card-titulo">Aplicação full stack com Flask</h3>
+                  <span class="data-publicacao">15 abr 2025</span>
+                  <span class="autor">João Roccella</span>
+              </header>
+              <p>Aprenda a desenvolver aplicações full stack com Flask, um framework web em Python que permite criar aplicações robustas e escaláveis.</p>
+              <footer>
+                  <button type="button" class="botao botao-continue">Continuar lendo</button>
+                  <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+              </footer>
+          </article>
+
+          <article class="card">
+              <header>
+                  <h3 class="card-titulo">API RESTful com FastAPI</h3>
+                  <span class="data-publicacao">15 abr 2025</span>
+                  <span class="autor">João Roccella</span>
+              </header>
+              <p>Aprenda a criar APIs RESTful com o FastAPI, um framework moderno e rápido para construir APIs com Python incluindo exemplos práticos e documentação.</p>
+              <p>E o melhor de tudo: sua documentação de API com Swagger sai automaticamente!</p>
+              <footer>
+                  <button type="button" class="botao botao-continue">Continuar lendo</button>
+                  <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+              </footer>
+          </article>
+
+          <article class="card">
+              <header>
+                  <h3 class="card-titulo">Portfólio profissional usando GitHub Pages</h3>
+                  <span class="data-publicacao">15 abr 2025</span>
+                  <span class="autor">João Roccella</span>
+              </header>
+              <p>Crie e publique seu portfólio profissional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
+              <footer>
+                  <button type="button" class="botao botao-continue">Continuar lendo</button>
+                  <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+              </footer>
+          </article>
+      </div>
+  </section>
+
+<section id="contato">
+  <h2>Entre em contato comigo</h2>
+  <form>
+      <input type="text" name="nome">
+      <input type="email" name="email">
+      <textarea name="mensagem" rows="5" cols="50"></textarea>
+      <input type="submit" name="botaoEnviar" value="Solicitar contato">
+      <!-- <button type="button" name="botaoEnviar">Solicitar contato</button> -->
+  </form>
+</section>
 
     <hr>
 
@@ -224,6 +281,30 @@
         
     </section>
 
+    <script>
+      document.querySelector('#botao-tema').addEventListener('click', trocatema)
+
+      function trocatema() {
+        const root = document.documentElement;
+        if(root.getAttribute('data-theme') === 'dark'){
+          root.removeAttribute('data-theme');
+        } else {
+          root.setAttribute('data-theme', 'dark');
+        }
+      }
+
+
+      document.querySelector('#botao-contrast').addEventListener('click', trocatemacontrast)
+
+      function trocatemacontrast() {
+        const root = document.documentElement;
+        if(root.getAttribute('data-theme') === 'contrast'){
+          root.removeAttribute('data-theme');
+        } else {
+          root.setAttribute('data-theme', 'contrast');
+        }
+      }
+    </script>
 
 </body>
 
